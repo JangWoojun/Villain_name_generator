@@ -18,6 +18,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var exNameLabel: UILabel!
     @IBOutlet weak var exVillainNameLabel: UILabel!
     
+    var length = 10
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -52,43 +54,56 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    func createName() -> String {
+        var villainName = ""
+        
+        let myLocation = addressTextField.text ?? ""
+        let myName = nameTextField.text ?? ""
+        
+        villainName += myLocation
+        
+        let locationNum = Int.random(in: 0...1)
+        let location = locationNum == 0 ? locations[0][Int.random(in: 0..<71)] : locations[1][Int.random(in: 0..<40)]
+        
+        villainName += location
+        villainName += locationNum == 0 ? "" : specificLocations[location]!
+        
+        let jobNum = Int.random(in: 0...1)
+        let job = jobNum == 0 ? jobs[0][Int.random(in: 0..<18)] : jobs[1][Int.random(in: 0..<23)]
+        let object = jobNum == 0 ? objects[Int.random(in: 0..<58)] : ""
+        
+        villainName += object
+        villainName += job
+        
+        villainName += myName
+        
+        return villainName
+    }
+    
     
     @IBAction func lengthStepper(_ sender: UIStepper) {
-        lengthLabel.text = "\(Int(sender.value))자리"
+        length = Int(sender.value)
+        lengthLabel.text = "\(length)자리"
     }
     
     
     @IBAction func createButtonTapped(_ sender: UIButton) {
         if !lengthSwitch.isOn {
             
-            var villainName = ""
-            
-            let myLocation = addressTextField.text ?? ""
-            let myName = nameTextField.text ?? ""
-            
-            villainName += myLocation
-            
-            let locationNum = Int.random(in: 0...1)
-            let location = locationNum == 0 ? locations[0][Int.random(in: 0..<71)] : locations[1][Int.random(in: 0..<40)]
-            
-            villainName += location
-            villainName += locationNum == 0 ? "" : specificLocations[location]!
-            
-            let jobNum = Int.random(in: 0...1)
-            let job = jobNum == 0 ? jobs[0][Int.random(in: 0..<18)] : jobs[1][Int.random(in: 0..<23)]
-            let object = jobNum == 0 ? objects[Int.random(in: 0..<58)] : ""
-            
-            villainName += object
-            villainName += job
-            
-            villainName += myName
+            let villainName = createName()
             
             nameLabel.text = villainName
             
         } else {
-            
-            
-            
+            var villainName: String
+            while true {
+                villainName = createName()
+                
+                if villainName.count <= length {
+                    nameLabel.text = villainName
+                    break
+                }
+            }
         }
     }
     
