@@ -63,7 +63,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let exName = exNames[Int.random(in: 0..<exNames.count)]
             let ex = createName(myLocation: exLocation, myName: exName)
         
-            if ex.count <= 18 {
+            if ex.count <= 16 {
                 exNameLabel.text = exName
                 exAddressLabel.text = exLocation
                 exVillainNameLabel.text = " \(ex) "
@@ -79,7 +79,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 let exName = exNames[Int.random(in: 0..<exNames.count)]
                 let ex = createName(myLocation: exLocation, myName: exName)
             
-                if ex.count <= 18 {
+                if ex.count <= 16 {
                     exNameLabel.text = exName
                     exAddressLabel.text = exLocation
                     exVillainNameLabel.text = " \(ex) "
