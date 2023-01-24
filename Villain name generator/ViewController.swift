@@ -52,6 +52,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    
+    @IBAction func lengthStepper(_ sender: UIStepper) {
+        lengthLabel.text = "\(Int(sender.value))자리"
+    }
+    
+    
     @IBAction func createButtonTapped(_ sender: UIButton) {
         if !lengthSwitch.isOn {
             
