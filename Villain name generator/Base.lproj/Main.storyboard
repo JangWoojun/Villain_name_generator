@@ -147,7 +147,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EJQ-bW-CKw">
-                                <rect key="frame" x="20" y="631" width="350" height="80"/>
+                                <rect key="frame" x="20" y="631" width="350" height="30"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="qzb-OT-pKl">
                                         <rect key="frame" x="0.0" y="0.0" width="153.66666666666666" height="30"/>
@@ -181,18 +181,18 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 서울피자스쿨푸드파이터엄준식 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CG-RL-GEN">
-                                        <rect key="frame" x="0.0" y="45" width="300" height="35"/>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="uPT-x1-OXw"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="NeoDunggeunmo-Regular" family="NeoDunggeunmo" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 서울피자스쿨푸드파이터엄준식 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CG-RL-GEN">
+                                <rect key="frame" x="20" y="671" width="350" height="35"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="uPT-x1-OXw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NeoDunggeunmo-Regular" family="NeoDunggeunmo" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -201,6 +201,7 @@
                             <constraint firstItem="Ei8-xU-pU9" firstAttribute="top" secondItem="fft-Hz-mHJ" secondAttribute="bottom" constant="30" id="4Z8-4U-mJ5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IRy-IU-Hal" secondAttribute="trailing" constant="20" id="4id-eH-6D9"/>
                             <constraint firstAttribute="trailing" secondItem="J2r-pW-CmD" secondAttribute="trailing" constant="20" id="8pF-5i-1cH"/>
+                            <constraint firstItem="3CG-RL-GEN" firstAttribute="top" secondItem="EJQ-bW-CKw" secondAttribute="bottom" constant="10" id="9Jk-Ha-MYc"/>
                             <constraint firstItem="Gu3-rm-SE4" firstAttribute="top" secondItem="Oho-Me-ymV" secondAttribute="bottom" constant="20" id="BEX-HB-ZY1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iUd-al-bsS" secondAttribute="trailing" constant="20" id="ByF-JD-chf"/>
                             <constraint firstItem="Ei8-xU-pU9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="C7z-dh-tob"/>
@@ -218,9 +219,11 @@
                             <constraint firstItem="Oho-Me-ymV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="afh-KX-f3s"/>
                             <constraint firstAttribute="trailing" secondItem="EJQ-bW-CKw" secondAttribute="trailing" constant="20" id="h6l-BA-9yu"/>
                             <constraint firstItem="Gu3-rm-SE4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jCd-iI-N6d"/>
+                            <constraint firstItem="3CG-RL-GEN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jY4-QD-CFg"/>
                             <constraint firstItem="EJQ-bW-CKw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="o8F-Km-OVq"/>
                             <constraint firstItem="J2r-pW-CmD" firstAttribute="top" secondItem="Gu3-rm-SE4" secondAttribute="bottom" constant="30" id="sA1-rw-m72"/>
                             <constraint firstItem="riK-Yg-hbQ" firstAttribute="top" secondItem="Ei8-xU-pU9" secondAttribute="bottom" constant="20" id="t30-ZS-iXE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3CG-RL-GEN" secondAttribute="trailing" constant="20" id="uNw-DI-MsD"/>
                             <constraint firstItem="iUd-al-bsS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="y41-CO-pi5"/>
                         </constraints>
                     </view>

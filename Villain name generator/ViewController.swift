@@ -18,12 +18,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var exNameLabel: UILabel!
     @IBOutlet weak var exVillainNameLabel: UILabel!
     
+    weak var timer: Timer?
+    
     var length = 12
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        print(lengthStepper.value)
     }
     
     func setupUI() {
@@ -54,13 +55,43 @@ class ViewController: UIViewController, UITextFieldDelegate {
         exVillainNameLabel.layer.cornerRadius = 10
         
         lengthStepper.value = 12.0
+        
+        
+        while true {
+            
+            let exLocation = exLocations[Int.random(in: 0..<exLocations.count)]
+            let exName = exNames[Int.random(in: 0..<exNames.count)]
+            let ex = createName(myLocation: exLocation, myName: exName)
+        
+            if ex.count <= 18 {
+                exNameLabel.text = exName
+                exAddressLabel.text = exLocation
+                exVillainNameLabel.text = " \(ex) "
+                break
+            }
+        }
+        
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { [self] _ in
+            while true {
+                
+                let exLocation = exLocations[Int.random(in: 0..<exLocations.count)]
+                let exName = exNames[Int.random(in: 0..<exNames.count)]
+                let ex = createName(myLocation: exLocation, myName: exName)
+            
+                if ex.count <= 18 {
+                    exNameLabel.text = exName
+                    exAddressLabel.text = exLocation
+                    exVillainNameLabel.text = " \(ex) "
+                    break
+                }
+            }
+        })
     }
     
-    func createName() -> String {
+    func createName(myLocation: String, myName: String) -> String {
         var villainName = ""
-        
-        let myLocation = addressTextField.text ?? ""
-        let myName = nameTextField.text ?? ""
+
         
         villainName += myLocation
         
@@ -92,14 +123,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func createButtonTapped(_ sender: UIButton) {
         if !lengthSwitch.isOn {
             
-            let villainName = createName()
+            let myLocation = addressTextField.text ?? ""
+            let myName = nameTextField.text ?? ""
             
-            nameLabel.text = villainName
+            let villainName = createName(myLocation: myLocation, myName: myName)
+            
+            nameLabel.text = "\(villainName)"
             
         } else {
             var villainName: String
             while true {
-                villainName = createName()
+                
+                let myLocation = addressTextField.text ?? ""
+                let myName = nameTextField.text ?? ""
+                
+                villainName = createName(myLocation: myLocation, myName: myName)
                 
                 if villainName.count <= length && villainName != nameLabel.text! {
                     nameLabel.text = villainName
