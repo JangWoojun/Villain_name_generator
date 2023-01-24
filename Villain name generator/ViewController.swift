@@ -99,7 +99,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             while true {
                 villainName = createName()
                 
-                if villainName.count <= length {
+                if villainName.count <= length && villainName != nameLabel.text! {
                     nameLabel.text = villainName
                     break
                 }
