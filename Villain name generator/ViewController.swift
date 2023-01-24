@@ -1,7 +1,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setupUI()
     }
-
+    
     func setupUI() {
         addressTextField.delegate = self
         nameTextField.delegate = self
@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         nameTextField.layer.cornerRadius = 10
         nameTextField.attributedPlaceholder = NSAttributedString(string: "이름", attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
         nameTextField.addLeftPadding()
-
+        
         exNameLabel.clipsToBounds = true
         exAddressLabel.clipsToBounds = true
         exVillainNameLabel.clipsToBounds = true
@@ -61,7 +61,29 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func createButtonTapped(_ sender: UIButton) {
         if !lengthSwitch.isOn {
             
-
+            var villainName = ""
+            
+            let myLocation = addressTextField.text ?? ""
+            let myName = nameTextField.text ?? ""
+            
+            villainName += myLocation
+            
+            let locationNum = Int.random(in: 0...1)
+            let location = locationNum == 0 ? locations[0][Int.random(in: 0..<71)] : locations[1][Int.random(in: 0..<40)]
+            
+            villainName += location
+            villainName += locationNum == 0 ? "" : specificLocations[location]!
+            
+            let jobNum = Int.random(in: 0...1)
+            let job = jobNum == 0 ? jobs[0][Int.random(in: 0..<18)] : jobs[1][Int.random(in: 0..<23)]
+            let object = jobNum == 0 ? objects[Int.random(in: 0..<58)] : ""
+            
+            villainName += object
+            villainName += job
+            
+            villainName += myName
+            
+            nameLabel.text = villainName
             
         } else {
             
@@ -73,9 +95,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
 }
 
 extension UITextField {
-  func addLeftPadding() {
-    let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
-    self.leftView = paddingView
-    self.leftViewMode = ViewMode.always
-  }
+    func addLeftPadding() {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
+        self.leftView = paddingView
+        self.leftViewMode = ViewMode.always
+    }
 }
