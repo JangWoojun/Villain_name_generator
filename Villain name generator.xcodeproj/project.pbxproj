@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3095EB51297FDEBB00E99316 /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095EB50297FDEBB00E99316 /* Contents.swift */; };
 		30E39324297F6FB00022AB49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E39323297F6FB00022AB49 /* AppDelegate.swift */; };
 		30E39326297F6FB00022AB49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E39325297F6FB00022AB49 /* SceneDelegate.swift */; };
 		30E39328297F6FB00022AB49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E39327297F6FB00022AB49 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3095EB50297FDEBB00E99316 /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
 		30E39320297F6FB00022AB49 /* Villain name generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Villain name generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E39323297F6FB00022AB49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30E39325297F6FB00022AB49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				30E3932C297F6FB10022AB49 /* Assets.xcassets */,
 				30E3932E297F6FB10022AB49 /* LaunchScreen.storyboard */,
 				30E39331297F6FB10022AB49 /* Info.plist */,
+				3095EB50297FDEBB00E99316 /* Contents.swift */,
 			);
 			path = "Villain name generator";
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				30E39328297F6FB00022AB49 /* ViewController.swift in Sources */,
 				30E39324297F6FB00022AB49 /* AppDelegate.swift in Sources */,
 				30E39326297F6FB00022AB49 /* SceneDelegate.swift in Sources */,
+				3095EB51297FDEBB00E99316 /* Contents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
