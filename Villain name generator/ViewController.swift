@@ -18,11 +18,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var exNameLabel: UILabel!
     @IBOutlet weak var exVillainNameLabel: UILabel!
     
-    var length = 10
+    var length = 12
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        print(lengthStepper.value)
     }
     
     func setupUI() {
@@ -52,6 +53,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         exNameLabel.layer.cornerRadius = 10
         exVillainNameLabel.layer.cornerRadius = 10
         
+        lengthStepper.value = 12.0
     }
     
     func createName() -> String {
@@ -106,6 +108,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
+    
+    
+    @IBAction func lengthSwitchChanged(_ sender: UISwitch) {
+        addressTextField.text = ""
+        nameTextField.text = ""
+        
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if (addressTextField.text?.count)! + (nameTextField.text?.count)! + string.count >= length {
+            return false
+        } else {
+            return true
+        }
+    }
+    
     
 }
 
