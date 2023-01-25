@@ -23,13 +23,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="악질 이름 생성기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fft-Hz-mHJ">
-                                <rect key="frame" x="20" y="77" width="280" height="35"/>
+                                <rect key="frame" x="20" y="67" width="280" height="35"/>
                                 <fontDescription key="fontDescription" name="NeoDunggeunmo-Regular" family="NeoDunggeunmo" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="riK-Yg-hbQ">
-                                <rect key="frame" x="20" y="187" width="350" height="150"/>
+                                <rect key="frame" x="20" y="177" width="350" height="150"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontSizeToFit="NO" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="JoF-qW-kKK">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="70"/>
@@ -53,7 +53,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="랜덤으로 악질 이름을 생성합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ei8-xU-pU9">
-                                <rect key="frame" x="20" y="142" width="350" height="25"/>
+                                <rect key="frame" x="20" y="132" width="350" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="4EX-ud-WAt"/>
                                     <constraint firstAttribute="width" constant="350" id="lzL-PL-Feo"/>
@@ -63,7 +63,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Oho-Me-ymV">
-                                <rect key="frame" x="20" y="357" width="350" height="32"/>
+                                <rect key="frame" x="20" y="347" width="350" height="32"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="v41-kb-DSs">
                                         <rect key="frame" x="0.0" y="0.0" width="169" height="31"/>
@@ -108,7 +108,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gu3-rm-SE4">
-                                <rect key="frame" x="20" y="409" width="350" height="65"/>
+                                <rect key="frame" x="20" y="399" width="350" height="65"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="xKV-iI-MBW"/>
@@ -128,26 +128,26 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUd-al-bsS">
-                                <rect key="frame" x="20" y="564" width="350" height="7"/>
+                                <rect key="frame" x="20" y="554" width="350" height="7"/>
                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="7" id="Tjb-VP-FJQ"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생성 버튼을 누르면 여기에 결과가 표시됩니다." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2r-pW-CmD">
-                                <rect key="frame" x="20" y="504" width="350" height="40"/>
+                                <rect key="frame" x="20" y="494" width="350" height="40"/>
                                 <fontDescription key="fontDescription" name="NeoDunggeunmo-Regular" family="NeoDunggeunmo" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떤 이름이 나올까?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRy-IU-Hal">
-                                <rect key="frame" x="20" y="591" width="350" height="20"/>
+                                <rect key="frame" x="20" y="581" width="350" height="20"/>
                                 <fontDescription key="fontDescription" name="NeoDunggeunmo-Regular" family="NeoDunggeunmo" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EJQ-bW-CKw">
-                                <rect key="frame" x="20" y="631" width="350" height="30"/>
+                                <rect key="frame" x="20" y="621" width="350" height="30"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="qzb-OT-pKl">
                                         <rect key="frame" x="0.0" y="0.0" width="153.66666666666666" height="30"/>
@@ -184,7 +184,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 서울피자스쿨푸드파이터엄준식 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CG-RL-GEN">
-                                <rect key="frame" x="20" y="671" width="350" height="35"/>
+                                <rect key="frame" x="20" y="661" width="350" height="35"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="uPT-x1-OXw"/>
@@ -210,7 +210,7 @@
                             <constraint firstItem="EJQ-bW-CKw" firstAttribute="top" secondItem="IRy-IU-Hal" secondAttribute="bottom" constant="20" id="HVI-vx-yYH"/>
                             <constraint firstItem="iUd-al-bsS" firstAttribute="top" secondItem="J2r-pW-CmD" secondAttribute="bottom" constant="20" id="Hdq-89-tvt"/>
                             <constraint firstItem="riK-Yg-hbQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Odm-fK-Gsd"/>
-                            <constraint firstItem="fft-Hz-mHJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="OxK-lj-obv"/>
+                            <constraint firstItem="fft-Hz-mHJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="OxK-lj-obv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="riK-Yg-hbQ" secondAttribute="trailing" constant="20" id="PIQ-Js-XgO"/>
                             <constraint firstItem="Oho-Me-ymV" firstAttribute="top" secondItem="riK-Yg-hbQ" secondAttribute="bottom" constant="20" id="Pbu-12-d7A"/>
                             <constraint firstItem="IRy-IU-Hal" firstAttribute="top" secondItem="iUd-al-bsS" secondAttribute="bottom" constant="20" id="Vtp-el-j0w"/>
